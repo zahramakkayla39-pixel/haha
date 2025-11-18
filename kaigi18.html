@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Toko Araaw — Beranda</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --sky:#a9e1ff;
+      --sky-dark:#6fcfff;
+      --accent:#2fa8ff;
+      --rounded:12px;
+      --card-radius:14px;
+    }
+    body{ background: linear-gradient(180deg,#f6fbff 0%, #ffffff 60%); font-family: system-ui, sans-serif; }
+    .navbar { background: linear-gradient(90deg,var(--sky) 0%, var(--sky-dark) 100%); box-shadow: 0 2px 8px rgba(47,168,255,0.12); }
+    .navbar-brand { font-weight:700; color: #fff; }
+    .nav-link { color: rgba(255,255,255,0.95); }
+    .logo-box{ width:42px; height:42px; border-radius:10px; background:white; display:flex; align-items:center; justify-content:center; }
+    .search-wrap{ margin-top: -36px; z-index: 50; position: relative;}
+    .search-input{ border-radius: 50px; box-shadow: 0 6px 18px rgba(11,76,130,0.06); }
+    .banner-img{ height: 260px; object-fit: cover; border-radius: 14px; }
+    .product-img{ height:180px; object-fit: cover; border-top-left-radius: var(--card-radius); border-top-right-radius: var(--card-radius); }
+    .card-product{ border-radius: var(--card-radius); overflow: hidden; }
+    .badge-live{ position: absolute; left:10px; top:10px; background: linear-gradient(90deg,#ff6b6b,#ff914d); color:white; padding:6px 8px; border-radius:10px; font-weight:700; font-size:12px; }
+    .dot-menu{ font-size:20px; color: #fff; cursor:pointer; }
+    footer{ padding:30px 0; text-align:center; color:#556; margin-top: 40px; }
+    .services .service{ background: white; border-radius:12px; padding:12px; box-shadow: 0 8px 20px rgba(47,128,255,0.06); }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <div class="logo-box">
+        <!-- simple logo -->
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="#2fa8ff"/>
+          <text x="12" y="16" text-anchor="middle" font-size="12" fill="#fff" font-family="sans-serif">A</text>
+        </svg>
+      </div>
+      <span>TokoAraa</span>
+    </a>
+
+    <div class="ms-auto d-flex align-items-center gap-3">
+      <!-- three dots menu -->
+      <div class="dropdown">
+        <span class="dot-menu dropdown-toggle" id="menuDots" data-bs-toggle="dropdown" aria-expanded="false">⋯</span>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="menuDots">
+          <li><a class="dropdown-item" href="kaigi18.html">Beranda</a></li>
+          <li><a class="dropdown-item" href="kaigi88.html">Keranjang</a></li>
+          <li><a class="dropdown-item" href="kaigi11.html">Kritik Saran</a></li>
+          <li><a class="dropdown-item" href="kaigi81.html">Tentang Kami</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO + SEARCH -->
+<div class="container">
+  <div class="row align-items-center mt-4">
+    <div class="col-12 text-center">
+      <h1 class="fw-bold" style="color:#0b4f7a">Selamat Datang di TokoAraa 👋</h1>
+      <p class="text-muted">Belanja kebutuhan cewek, promo seru, voucher & flash sale setiap hari!</p>
+    </div>
+  </div>
+
+  <!-- search -->
+  <div class="row justify-content-center search-wrap">
+    <div class="col-11 col-md-8">
+      <div class="input-group search-input">
+        <input id="searchInput" type="search" class="form-control form-control-lg" placeholder="Cari produk, contoh: tas, sepatu, skincare..." />
+        <button id="searchBtn" class="btn btn-primary">Cari</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BANNER CAROUSEL -->
+  <div class="row mt-3">
+    <div class="col-12 col-lg-8">
+      <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="position-relative">
+              <img src="vocer.jpg" class="d-block w-100 banner-img" alt="promo1">
+              <div class="badge-live">FLASH SALE</div>
+            </div>
+          </div>  
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Promo side cards -->
+    <div class="col-12 col-lg-4 mt-3 mt-lg-0">
+      <div class="d-grid gap-3">
+        <div class="p-2" style="border-radius:12px; background: linear-gradient(90deg,#ffffff, #f0fbff); box-shadow:0 8px 20px rgba(47,128,255,0.06);">
+          <h6 class="mb-1">Voucher Diskon</h6>
+          <p class="small text-muted mb-0">Gunakan kode: ARA10 untuk potongan Rp10.000</p>
+        </div>
+        <div class="p-2" style="border-radius:12px; background: linear-gradient(90deg,#ffffff, #fff7fb); box-shadow:0 8px 20px rgba(47,128,255,0.06);">
+          <h6 class="mb-1">Flash Sale</h6>
+          <p class="small text-muted mb-0">Sepatu diskon 50% — Stok terbatas!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services row: pulsa, pdam, indomaret, tagihan -->
+  <div class="row mt-4 services">
+    <div class="col-12">
+      <div class="d-flex gap-3 overflow-auto pb-2">
+        <div class="service flex-shrink-0 text-center" style="width:120px"><small>Pulsa</small></div>
+        <div class="service flex-shrink-0 text-center" style="width:120px"><small>PDAM</small></div>
+        <div class="service flex-shrink-0 text-center" style="width:120px"><small>Indomaret</small></div>
+        <div class="service flex-shrink-0 text-center" style="width:120px"><small>PayLater</small></div>
+        <div class="service flex-shrink-0 text-center" style="width:120px"><small>Tagihan Listrik</small></div>
+        <div class="service flex-shrink-0 text-center" style="width:120px"><small>Voucher</small></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Produk grid -->
+  <div class="row mt-4">
+    <div class="col-12">
+      <h5 class="mb-3" style="color:#0b4f7a">Produk Populer</h5>
+      <div id="productGrid" class="row g-3">
+        <!-- JS will populate products -->
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p class="mb-1">&copy; <span id="year"></span> TokoAraa — Semua hak dilindungi.</p>
+    <small class="text-muted">Butuh bantuan? hubungi: support@tokoaraa.com</small>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- App JS -->
+<script>
+  // Sample product data
+  const products = [
+    {id:1, name:"Tas Cantik Pink", price:149000, img:"tas.jpg"},
+    {id:2, name:"Sepatu Putih Casual", price:249000, img:"sepatu.jpg"},
+    {id:3, name:"Ikat Rambut lucu", price:55000, img:"ikat.jpg"},
+    {id:4, name:"Dress Summer", price:199000, img:"baju.jpg"},
+    {id:5, name:"Jam Tangan Lucu", price:120000, img:"jam.jpg"},
+    {id:6, name:"Kaca Mata Wanita", price:45000, img:"kaca.jpg"}
+  ];
+
+  // Render products
+  function formatRp(n){ return 'Rp ' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); }
+  const grid = document.getElementById('productGrid');
+  products.forEach(p=>{
+    const col = document.createElement('div');
+    col.className = 'col-6 col-md-4 col-lg-3';
+    col.innerHTML = `
+      <div class="card card-product h-100 shadow-sm">
+        <img src="${p.img}" class="product-img w-100" alt="${p.name}">
+        <div class="card-body d-flex flex-column">
+          <h6 class="card-title mb-1">${p.name}</h6>
+          <p class="mb-2 text-primary fw-bold">${formatRp(p.price)}</p>
+          <div class="mt-auto d-flex gap-2">
+            <a href="detail.html?id=${p.id}" class="btn btn-outline-primary btn-sm flex-grow-1">Detail</a>
+            <button class="btn btn-primary btn-sm add-to-cart" data-id="${p.id}">Tambah</button>
+          </div>
+        </div>
+      </div>
+    `;
+    grid.appendChild(col);
+  });
+
+  // Cart functions (localStorage)
+  function getCart(){ return JSON.parse(localStorage.getItem('tokoaraa_cart') || '[]'); }
+  function setCart(cart){ localStorage.setItem('tokoaraa_cart', JSON.stringify(cart)); }
+
+  document.querySelectorAll('.add-to-cart').forEach(btn=>{
+    btn.addEventListener('click', e=>{
+      const id = Number(e.currentTarget.dataset.id);
+      const prod = products.find(x=>x.id===id);
+      if(!prod) return;
+      let cart = getCart();
+      const exist = cart.find(i=>i.id===id);
+      if(exist) exist.qty++;
+      else cart.push({id:prod.id, name:prod.name, price:prod.price, img:prod.img, qty:1});
+      setCart(cart);
+      alert(prod.name + " ditambahkan ke troli ✅");
+    });
+  });
+
+  // Search
+  document.getElementById('searchBtn').addEventListener('click', ()=>{
+    const q = document.getElementById('searchInput').value.toLowerCase().trim();
+    if(!q){ alert('Masukkan kata pencarian.'); return; }
+    // simple filter: redirect to produk list with query param
+    location.href = 'detail.html?search=' + encodeURIComponent(q);
+  });
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
